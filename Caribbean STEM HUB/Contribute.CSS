@@ -1,0 +1,185 @@
+/* Add styles for the Contribute section */
+.contribute-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.section-description, label {
+    font-size: 18px;
+    display: block;
+    text-align: center; /* Center the text */
+    cursor: pointer;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.section-description {
+    line-height: 1.5;
+    margin: 20px 0 5px;
+}
+
+#contribute-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+select, input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 20px;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #555;
+}
+
+textarea, input[type="text"], #content-file, #thumbnail, #project-files {
+    border: 2px solid #333; /* Add rectangular border for specific inputs */
+    border-radius: 20px;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+#content-file, #thumbnail, #project-files {
+    border-radius: 20px; /* Keep these inputs rectangular */
+}
+
+/* Styles for the file upload input */
+#file-upload {
+    display: none;
+    margin-top: 20px;
+}
+
+#project-files, #content-file {
+    border-radius: 20px; /* Keep these inputs rectangular */
+}
+
+#project-files:hover, #content-file:hover {
+    background-color: #f0f0f0; /* Change the background on hover if desired */
+}
+
+label {
+    border: none; /* Remove borders from questions */
+}
+/* Add styles for the Volunteer Reporter Application form */
+.volunteer-reporter-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.volunteer-reporter-section h1, .volunteer-reporter-section p {
+    margin: 10px 0;
+}
+
+.volunteer-reporter-section form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.volunteer-reporter-section .form-group {
+    margin-bottom: 15px;
+}
+
+.volunteer-reporter-section label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.volunteer-reporter-section input[type="text"],
+.volunteer-reporter-section input[type="email"],
+.volunteer-reporter-section input[type="number"],
+.volunteer-reporter-section textarea,
+.volunteer-reporter-section select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    font-size: 14px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+.volunteer-reporter-section input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+.volunteer-reporter-section input[type="submit"]:hover {
+    background-color: #555;
+}
+/* Add styles for the Upload Notes form */
+.notes-form {
+    text-align: center;
+    padding: 20px;
+}
+
+.notes-form h1, .notes-form p {
+
+    text-align: center;
+    justify-content: center;
+}
+
+.notes-form form {
+    max-width: 100px;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+}
+
+.notes-form .form-group {
+    margin-bottom: 15px;
+    text-align: center;
+    justify-content: center;
+}
+
+.notes-form label {
+    display: block;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.notes-form input[type="text"],
+.notes-form textarea,
+.notes-form select,
+.notes-form input[type="file"] {
+    width: 50%;
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    font-size: 14px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+.notes-form input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 50%;
+}
+
+.notes-form input[type="submit"]:hover {
+    background-color: #555;
+    width: 50%;
+}

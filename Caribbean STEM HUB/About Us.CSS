@@ -1,0 +1,75 @@
+/* Add styles for the About Us section */
+.about-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.mission-vision {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.mission-vision strong {
+    font-weight: bold;
+}
+
+/* Styles for "Follow us at:" text */
+.follow-us-text {
+    font-size: 24px; /* Adjust the font size as needed */
+    margin-bottom: 10px;
+}
+
+.social-media {
+    margin-top: 20px;
+}
+
+.social-media a {
+    text-decoration: none;
+    margin: 10px;
+}
+
+.social-media img {
+    width: 225px;
+    height: 225px;
+    transition: transform 0.2s;
+}
+
+.social-media img:hover {
+    transform: scale(1.2);
+}
+/* Add styles for the Contact Information section */
+.contact-info {
+    text-align: center;
+    padding: 20px;
+}
+
+.contact-info h2 {
+    font-size: 24px; /* Adjust the font size as needed */
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    font-size: 18px; /* Adjust the font size as needed */
+    line-height: 1.5;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info li {
+    font-size: 18px; /* Adjust the font size as needed */
+    line-height: 1.5;
+    margin: 10px 0;
+}
+
+.contact-info a {
+    color: #0078d4; /* Adjust the color to match your website's theme */
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.contact-info a:hover {
+    color: #004d9c; /* Adjust the color for hover effect */
+}

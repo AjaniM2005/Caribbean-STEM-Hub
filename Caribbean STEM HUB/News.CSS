@@ -1,0 +1,31 @@
+/* Add styles for the News section */
+.page-content {
+    text-align: center;
+    padding: 20px;
+}
+
+.section-title {
+    font-size: 24px; /* Adjust the font size as needed */
+    margin-bottom: 10px;
+}
+
+.section-description {
+    font-size: 18px; /* Adjust the font size as needed */
+    line-height: 1.5;
+}
+
+.no-content-message {
+    font-size: 18px; /* Adjust the font size as needed */
+    line-height: 1.5;
+    margin-top: 20px;
+}
+
+.no-content-message a {
+    color: #0078d4; /* Adjust the color to match your website's theme */
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.no-content-message a:hover {
+    color: #004d9c; /* Adjust the color for hover effect */
+}

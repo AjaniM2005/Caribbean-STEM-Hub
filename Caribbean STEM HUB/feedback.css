@@ -1,0 +1,53 @@
+/* Reset some default margin and padding for the body */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style for the feedback section */
+.feedback-section {
+    text-align: center;
+}
+
+/* Style for the form within the feedback section */
+.feedback-form {
+    max-width: 600px;
+    margin: 0 auto;
+    border: none; /* Remove the border */
+    padding: 20px; /* Add padding for spacing */
+}
+
+/* Style for the input groups within the form */
+.input-group {
+    margin-bottom: 15px;
+}
+
+/* Style for the input elements */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 40%; /* Reduced width for all input bars */
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    height: 30px; /* Medium height for all input bars */
+}
+
+/* Increase the height for the last input bar */
+textarea {
+    height: 120px; /* Adjust the height for the last input bar as needed */
+}
+
+/* Style for the submit button */
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px; /* Visually appealing padding */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
