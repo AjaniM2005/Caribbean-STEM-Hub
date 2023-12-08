@@ -3,7 +3,7 @@
 header {
     text-align: center; /* Center the content horizontally */
     padding: 5px 15px;
-    background-color: #f0f0f0;
+    background-color: #24527a; 
     border-bottom: 2px solid #333; /* Bottom border separating header from body */
 }
 
@@ -36,7 +36,7 @@ nav li {
 
 nav a {
     text-decoration: none;
-    color: #333;
+    color: #ffffff;
     font-size: 18px;
     font-family: Arial, sans-serif;
 }
