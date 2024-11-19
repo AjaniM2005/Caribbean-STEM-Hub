@@ -99,27 +99,58 @@ input[type="password"] {
     font-size: 18px;
 }
 @media screen and (max-width: 768px) {
+    /* Logo Styling */
     .logo {
-        max-width: 80px; /* Same as desktop */
-        height: 15px; /* Maintain aspect ratio */
-        margin-right: 5px; /* Same as desktop */
+        width: auto; /* Allow the logo to scale naturally */
+        height: auto; /* Maintain aspect ratio */
+        margin-right: 10px; /* Standard spacing */
     }
-    
+
+    /* Navigation Menu */
     nav ul {
-        list-style: none; /* Ensure it remains consistent */
-        display: flex; /* Same as desktop */
-        justify-content: center; /* Center menu horizontally */
-        margin: 0; /* Same as desktop */
+        display: flex;
+        flex-direction: row; /* Keep items in a row */
+        justify-content: center; /* Center items like desktop */
+        align-items: center; /* Vertically align items */
+        padding: 0; /* Remove any extra padding */
+        margin: 0; /* Ensure uniform margin */
     }
 
     nav ul li {
-        margin-right: 20px; /* Keep spacing consistent */
+        margin-right: 15px; /* Keep spacing between items */
+        margin-bottom: 0; /* Remove column-specific spacing */
+        list-style: none; /* Ensure no bullets */
     }
 
     nav a {
-        text-decoration: none; /* Keep consistent styling */
+        text-decoration: none;
         color: #ffffff;
-        font-size: 18px; /* Match desktop */
+        font-size: 16px; /* Slightly smaller font for mobile */
         font-family: Arial, sans-serif;
     }
+
+    /* Dropdown Menu (if applicable) */
+    .dropdown-menu {
+        display: none; /* Start hidden */
+        position: absolute;
+        background-color: #f0f0f0;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block; /* Show dropdown on hover */
+    }
+}
+
+/* Ensure uniform spacing and layout across devices */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header, nav, footer {
+    max-width: 100%; /* Full-width responsiveness */
+    overflow-x: hidden; /* Prevent horizontal scroll issues */
 }
