@@ -73,6 +73,7 @@
 .contact-info a:hover {
     color: #004d9c; /* Adjust the color for hover effect */
 }
+/* Responsive styles (adjust as needed) */
 @media screen and (max-width: 768px) {
     .logo {
         max-width: 80px; /* Same as desktop */
