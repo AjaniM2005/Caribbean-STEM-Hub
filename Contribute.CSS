@@ -183,3 +183,28 @@ label {
     background-color: #555;
     width: 50%;
 }
+@media screen and (max-width: 768px) {
+    .logo {
+        max-width: 80px; /* Same as desktop */
+        height: 15px; /* Maintain aspect ratio */
+        margin-right: 5px; /* Same as desktop */
+    }
+    
+    nav ul {
+        list-style: none; /* Ensure it remains consistent */
+        display: flex; /* Same as desktop */
+        justify-content: center; /* Center menu horizontally */
+        margin: 0; /* Same as desktop */
+    }
+
+    nav ul li {
+        margin-right: 20px; /* Keep spacing consistent */
+    }
+
+    nav a {
+        text-decoration: none; /* Keep consistent styling */
+        color: #ffffff;
+        font-size: 18px; /* Match desktop */
+        font-family: Arial, sans-serif;
+    }
+}
