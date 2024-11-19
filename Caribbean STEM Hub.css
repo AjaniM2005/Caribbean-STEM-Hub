@@ -114,21 +114,28 @@ footer {
     height: 15vh; /* 20% of the viewport height */
 }
 /* Responsive styles (adjust as needed) */
-/* Remove or modify styles within the media query for consistency */
 @media screen and (max-width: 768px) {
     .logo {
-        max-width: unset; /* Remove size adjustments */
-        margin-right: unset; /* Keep the margin consistent */
+        max-width: 80px; /* Same as desktop */
+        height: 15px; /* Maintain aspect ratio */
+        margin-right: 5px; /* Same as desktop */
     }
     
     nav ul {
-        flex-direction: row; /* Match laptop/desktop layout */
-        align-items: center; /* Keep alignment consistent */
-        margin: unset; /* Ensure margins remain as they are */
+        list-style: none; /* Ensure it remains consistent */
+        display: flex; /* Same as desktop */
+        justify-content: center; /* Center menu horizontally */
+        margin: 0; /* Same as desktop */
     }
 
     nav ul li {
-        margin-right: 20px; /* Match desktop spacing (adjust as needed) */
-        margin-bottom: unset; /* Remove mobile-specific spacing */
+        margin-right: 20px; /* Keep spacing consistent */
+    }
+
+    nav a {
+        text-decoration: none; /* Keep consistent styling */
+        color: #ffffff;
+        font-size: 18px; /* Match desktop */
+        font-family: Arial, sans-serif;
     }
 }
