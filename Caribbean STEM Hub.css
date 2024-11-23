@@ -115,28 +115,32 @@ footer {
     height: 15vh; /* 20% of the viewport height */
 }
 
-/* Responsive Styles for All Small Screens */
+/* Add horizontal scrolling for the navigation menu on smaller screens */
 @media screen and (max-width: 768px) {
-    nav {
-        width: 100%; /* Ensure the navigation container spans the viewport */
-    }
-
     nav ul {
-        padding: 10px; /* Add padding for better aesthetics */
-        margin: 0 auto; /* Center the navigation menu visually */
+        display: flex; /* Keep the navigation items in a row */
+        flex-wrap: nowrap; /* Prevent wrapping to the next line */
+        overflow-x: auto; /* Enable horizontal scrolling */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling for touch devices */
+        padding: 0;
+        margin: 0;
     }
-}
 
-/* Style for Scrollbar (Optional) */
-nav ul::-webkit-scrollbar {
-    height: 5px; /* Height of the scrollbar */
-}
+    nav ul li {
+        flex: 0 0 auto; /* Prevent shrinking or growing */
+        margin-right: 20px; /* Keep consistent spacing between items */
+    }
 
-nav ul::-webkit-scrollbar-thumb {
-    background-color: #24527a; /* Scrollbar thumb color */
-    border-radius: 10px; /* Rounded scrollbar */
-}
+    nav ul::-webkit-scrollbar {
+        height: 6px; /* Adjust scrollbar height */
+    }
 
-nav ul::-webkit-scrollbar-track {
-    background-color: #f0f0f0; /* Scrollbar track color */
+    nav ul::-webkit-scrollbar-thumb {
+        background-color: #24527a; /* Match your theme color */
+        border-radius: 3px; /* Rounded scrollbar edges */
+    }
+
+    nav ul::-webkit-scrollbar-track {
+        background-color: #f0f0f0; /* Lighter background for the scrollbar track */
+    }
 }
