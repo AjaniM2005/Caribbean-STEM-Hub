@@ -183,49 +183,47 @@ label {
     background-color: #555;
     width: 50%;
 }
-/* Responsive Navigation Menu: Small Screens */
+/* General Navigation Menu Styles */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start; /* Align menu items to the start for smooth scrolling */
+    padding: 0;
+    margin: 0;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling for mobile */
+    white-space: nowrap; /* Prevent items from wrapping */
+    width: max-content; /* Automatically adjust width to fit all items */
+}
+
+/* Navigation Menu Items */
+nav ul li {
+    flex: 0 0 auto; /* Prevent shrinking or growing */
+    margin-right: 20px; /* Add spacing between items */
+}
+
+/* Responsive Styles for All Small Screens */
 @media screen and (max-width: 768px) {
-    nav ul {
-        display: flex;
-        flex-wrap: nowrap; /* Prevent wrapping */
-        overflow-x: auto; /* Enable horizontal scrolling */
-        -webkit-overflow-scrolling: touch; /* Smooth scrolling for mobile devices */
-        padding: 10px; /* Add padding for better aesthetics */
-        margin: 0 auto; /* Center the navigation menu */
-    }
-
-    nav ul li {
-        flex: 0 0 auto; /* Prevent shrinking or growing */
-        margin-right: 20px; /* Spacing between menu items */
-    }
-
-    /* Ensure the navigation menu has enough width for full scrolling */
     nav {
-        width: 100vw; /* Full width of the viewport */
+        width: 100%; /* Ensure the navigation container spans the viewport */
     }
 
-    /* Style for the scrollbar */
-    nav ul::-webkit-scrollbar {
-        height: 5px; /* Adjust height of horizontal scrollbar */
-    }
-
-    nav ul::-webkit-scrollbar-thumb {
-        background-color: #24527a; /* Color for scrollbar thumb */
-        border-radius: 10px;
-    }
-
-    nav ul::-webkit-scrollbar-track {
-        background-color: #f0f0f0; /* Track color for aesthetics */
+    nav ul {
+        padding: 10px; /* Add padding for better aesthetics */
+        margin: 0 auto; /* Center the navigation menu visually */
     }
 }
 
-/* Landscape Orientation Handling */
-@media screen and (orientation: landscape) and (max-height: 500px) {
-    nav ul {
-        overflow-x: auto; /* Ensure horizontal scrolling in landscape */
-    }
+/* Style for Scrollbar (Optional) */
+nav ul::-webkit-scrollbar {
+    height: 5px; /* Height of the scrollbar */
+}
 
-    nav ul li {
-        margin-right: 20px;
-    }
+nav ul::-webkit-scrollbar-thumb {
+    background-color: #24527a; /* Scrollbar thumb color */
+    border-radius: 10px; /* Rounded scrollbar */
+}
+
+nav ul::-webkit-scrollbar-track {
+    background-color: #f0f0f0; /* Scrollbar track color */
 }
