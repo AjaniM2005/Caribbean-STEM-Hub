@@ -24,36 +24,12 @@ header {
 }
 
 /* Navigation menu styling */
-/* General navigation menu styling */
 nav ul {
     list-style: none;
-    display: flex; /* Maintain horizontal layout */
-    justify-content: center; /* Align items to the left */
-    margin: 0;
+    display: flex;
+    justify-content: center; /* Center the menu horizontally */
+    margin: 0; /* Remove default margin on ul */
     padding: 0;
-    overflow-x: auto; /* Enable horizontal scrolling */
-    white-space: nowrap; /* Prevent wrapping to the next line */
-    scrollbar-width: thin; /* For modern browsers */
-    scrollbar-color: #24527a #f0f0f0; /* Styling for scrollbars */
-}
-
-nav ul::-webkit-scrollbar {
-    height: 8px; /* Height of the scrollbar */
-}
-
-nav ul::-webkit-scrollbar-thumb {
-    background-color: #24527a; /* Scrollbar thumb color */
-    border-radius: 4px; /* Rounded corners for thumb */
-}
-
-nav ul::-webkit-scrollbar-track {
-    background-color: #f0f0f0; /* Scrollbar track color */
-}
-
-/* Navigation links styling */
-nav ul li {
-    display: inline-block; /* Ensure items are inline */
-    margin-right: 20px; /* Space between menu items */
 }
 
 nav li {
@@ -137,16 +113,4 @@ footer {
     width: 100%;
     bottom: 0;
     height: 15vh; /* 20% of the viewport height */
-}
-
-/* Add horizontal scrolling for the navigation menu on smaller screens */
-@media screen and (max-width: 768px) {
-    nav ul {
-        justify-content: flex-start; /* Align items to the left */
-        padding: 0 10px; /* Add some padding for easier scrolling */
-    }
-
-    nav ul li {
-        margin-right: 15px; /* Slightly smaller spacing */
-    }
 }
