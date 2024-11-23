@@ -116,58 +116,31 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-    /* Logo Styling */
-    .logo {
-        width: auto; /* Allow the logo to scale naturally */
-        height: auto; /* Maintain aspect ratio */
-        margin-right: 10px; /* Standard spacing */
-    }
-
-    /* Navigation Menu */
     nav ul {
         display: flex;
-        flex-direction: row; /* Keep items in a row */
-        justify-content: center; /* Center items like desktop */
-        align-items: center; /* Vertically align items */
-        padding: 0; /* Remove any extra padding */
-        margin: 0; /* Ensure uniform margin */
+        flex-wrap: nowrap; /* Prevent wrapping */
+        overflow-x: auto; /* Enable horizontal scrolling */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling for mobile devices */
+        padding: 0; /* Adjust padding if needed */
+        margin: 0; /* Adjust margin if needed */
     }
 
     nav ul li {
-        margin-right: 15px; /* Keep spacing between items */
-        margin-bottom: 0; /* Remove column-specific spacing */
-        list-style: none; /* Ensure no bullets */
+        flex: 0 0 auto; /* Prevent items from shrinking or growing */
+        margin-right: 20px; /* Add spacing between items */
     }
 
-    nav a {
-        text-decoration: none;
-        color: #ffffff;
-        font-size: 16px; /* Slightly smaller font for mobile */
-        font-family: Arial, sans-serif;
+    /* Optional styling for better appearance */
+    nav ul::-webkit-scrollbar {
+        height: 5px; /* Set height for horizontal scrollbar */
     }
 
-    /* Dropdown Menu (if applicable) */
-    .dropdown-menu {
-        display: none; /* Start hidden */
-        position: absolute;
-        background-color: #f0f0f0;
-        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-        z-index: 1;
+    nav ul::-webkit-scrollbar-thumb {
+        background-color: #24527a; /* Scrollbar thumb color */
+        border-radius: 10px; /* Round scrollbar thumb */
     }
 
-    .dropdown:hover .dropdown-menu {
-        display: block; /* Show dropdown on hover */
+    nav ul::-webkit-scrollbar-track {
+        background-color: #f0f0f0; /* Scrollbar track color */
     }
-}
-
-/* Ensure uniform spacing and layout across devices */
-body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-header, nav, footer {
-    max-width: 100%; /* Full-width responsiveness */
-    overflow-x: hidden; /* Prevent horizontal scroll issues */
 }
