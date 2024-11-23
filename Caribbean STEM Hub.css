@@ -1,3 +1,7 @@
+/* General Reset */
+* {
+    box-sizing: border-box; /* Ensure padding and borders are included in width and height */
+}
 
 /* Header styling for the logo/name and navigation menu */
 header {
@@ -5,112 +9,151 @@ header {
     padding: 5px 15px;
     background-color: #24527a; 
     border-bottom: 2px solid #333; /* Bottom border separating header from body */
+    display: flex; /* Flexbox for better alignment */
+    flex-direction: column; /* Stack items vertically by default */
+    align-items: center; /* Center items horizontally */
 }
 
-/* Logo styling, aligned to the left */
+/* Logo styling */
 .logo {
-    text-align: left; /* Align the logo to the left within the header */
     max-width: 80px; /* Adjust the maximum width for smaller screens */
-    height: 15px; /* Maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
     margin-right: 5px; /* Adjust the margin as needed */
-    }
+}
 
-/* Name styling, centered above the navigation menu */
+/* Name styling */
 .header-title {
-    display: block;
-    font-size: 34px; /* Adjust the font size as needed */
+    font-size: 28px; /* Adjust the font size for smaller screens */
     font-weight: bold;
     color: #ffffff;
+    margin: 5px 0; /* Add space around the title */
 }
 
 /* Navigation menu styling */
 nav ul {
     list-style: none;
     display: flex;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
     justify-content: center; /* Center the menu horizontally */
-    margin: 0; /* Remove default margin on ul */
+    margin: 10px 0; /* Add margin for spacing */
     padding: 0;
+    width: 100%; /* Full width for better alignment */
 }
 
 nav li {
-    margin-right: 0 20px;
+    margin: 0 10px; /* Adjust spacing between menu items */
 }
 
 nav a {
     text-decoration: none;
     color: #ffffff;
-    font-size: 18px;
+    font-size: 16px; /* Reduce font size for smaller screens */
     font-family: Arial, sans-serif;
+    padding: 5px 10px; /* Add padding for touch-friendly links */
 }
 
+/* Search bar styling */
 .search-bar {
     display: flex;
+    flex-direction: column; /* Stack input and button vertically for smaller screens */
     align-items: center;
-    margin-left: 20px; /* Add margin for spacing */
+    margin-top: 10px; /* Add margin for spacing */
 }
 
 .search-bar input {
-    padding: 5px;
-    margin-right: 5px; /* Add margin for spacing */
+    padding: 8px;
+    margin-bottom: 5px; /* Add margin for spacing */
+    width: 90%; /* Make input field responsive */
 }
 
 .search-bar button {
-    padding: 5px 10px;
-    background-color: #333; /* Choose a button background color */
+    padding: 8px 12px;
+    background-color: #333; /* Button background color */
     color: #fff;
     border: none;
     cursor: pointer;
+    width: auto; /* Allow button width to adjust dynamically */
 }
 
-/* Additional line of separation between header and body */
-body {
-    border-top: 2px solid #333; /* Top border separating body from header */
-    /* Remove default margin and padding from the body element */
-    margin: 0;
-    padding: 0;
-}
-/* Add styling for the dropdown */
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
-
-/* Hide the dropdown menu by default */
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    background-color: #f0f0f0;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-/* Style the dropdown menu items */
-.dropdown-menu li {
-    display: block;
-    text-align: center;
-}
-
-/* Add styling for the dropdown links */
-.dropdown-menu a {
-    text-decoration: none;
-    color: #333;
-    font-size: 18px;
-    display: block;
-    padding: 10px 20px;
-}
-
-/* Style the dropdown on hover */
-.dropdown-menu a:hover {
-    background-color: #333;
-    color: #fff;
-}
-
-/* Footer styling without the black background */
+/* Footer styling */
 footer {
-    background-color: transparent; /* Set background color to transparent */
+    background-color: transparent;
     padding: 10px 20px;
-    border-top: 2px solid #fff; /* Top border separating footer from body */
+    border-top: 2px solid #fff;
     position: fixed;
     width: 100%;
     bottom: 0;
-    height: 15vh; /* 20% of the viewport height */
+    height: auto; /* Adjust height for smaller screens */
+    text-align: center;
+    font-size: 14px; /* Reduce font size for smaller screens */
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+    position: static; /* Make dropdown static for smaller screens */
+    background-color: #f0f0f0;
+    box-shadow: none; /* Remove shadow for smaller screens */
+    width: 100%; /* Full width for better usability */
+}
+
+/* Dropdown menu items */
+.dropdown-menu li {
+    text-align: center;
+    padding: 10px;
+}
+
+/* Responsive Design: Adjust layout for smaller screens */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+    }
+
+    .header-title {
+        font-size: 22px; /* Reduce font size */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack navigation items vertically */
+    }
+
+    nav li {
+        margin: 5px 0; /* Add vertical spacing */
+    }
+
+    .search-bar {
+        margin: 10px 0; /* Add spacing between sections */
+        flex-direction: column; /* Stack input and button */
+        width: 100%; /* Use full width */
+    }
+
+    .search-bar input,
+    .search-bar button {
+        width: 90%; /* Adjust width for better usability */
+    }
+
+    footer {
+        font-size: 12px; /* Smaller text for compactness */
+    }
+}
+
+/* Responsive Design: Further adjustments for very small screens */
+@media (max-width: 480px) {
+    .header-title {
+        font-size: 18px; /* Smaller font for compactness */
+    }
+
+    nav a {
+        font-size: 14px; /* Reduce font size for links */
+        padding: 5px; /* Compact padding */
+    }
+
+    .search-bar input,
+    .search-bar button {
+        width: 100%; /* Full width for smaller screens */
+    }
+
+    footer {
+        font-size: 10px; /* Smallest font for compactness */
+    }
 }
