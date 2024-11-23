@@ -24,23 +24,16 @@ header {
 }
 
 /* Navigation menu styling */
-
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: flex-start; /* Align menu items to the start for smooth scrolling */
+    justify-content: center; /* Center the menu horizontally */
+    margin: 0; /* Remove default margin on ul */
     padding: 0;
-    margin: 0;
     overflow-x: auto; /* Enable horizontal scrolling */
     -webkit-overflow-scrolling: touch; /* Smooth scrolling for mobile */
     white-space: nowrap; /* Prevent items from wrapping */
     width: max-content; /* Automatically adjust width to fit all items */
-}
-
-/* Navigation Menu Items */
-nav ul li {
-    flex: 0 0 auto; /* Prevent shrinking or growing */
-    margin-right: 20px; /* Add spacing between items */
 }
 
 nav li {
