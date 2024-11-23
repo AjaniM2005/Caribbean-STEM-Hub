@@ -26,10 +26,11 @@ nav ul {
     justify-content: center;
     margin: 0;
     padding: 0;
+    overflow: hidden; /* Prevent overflow on larger screens */
 }
 
 nav li {
-    margin-right: 0 20px;
+    margin-right: 20px;
 }
 
 nav a {
@@ -106,49 +107,52 @@ footer {
 
 /* Responsive adjustments for small screens */
 @media only screen and (max-width: 768px) {
-    /* Header title should be centered and the font-size should be reduced */
+    /* Header title should be slightly smaller */
     .header-title {
-        font-size: 24px;
+        font-size: 28px;
     }
 
-    /* Stack the navigation links vertically */
+    /* Make the navigation menu horizontally scrollable */
     nav ul {
-        flex-direction: column;
-        align-items: center;
+        display: flex;
+        justify-content: flex-start; /* Align items to the start */
+        overflow-x: auto; /* Enable horizontal scrolling */
+        white-space: nowrap; /* Prevent wrapping */
     }
 
     nav li {
-        margin-bottom: 10px; /* Add space between items */
+        flex: 0 0 auto; /* Prevent items from shrinking or wrapping */
+        margin-right: 15px; /* Adjust spacing between items */
     }
 
-    /* Adjust the search bar layout */
+    /* Hide scrollbar for cleaner look (optional) */
+    nav ul::-webkit-scrollbar {
+        display: none; /* Hide scrollbar for Webkit-based browsers */
+    }
+    nav ul {
+        -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+        scrollbar-width: none; /* Hide scrollbar for Firefox */
+    }
+
+    /* Search bar adjustments */
     .search-bar {
         margin-left: 0;
         justify-content: center;
         width: 100%;
     }
 
-    .search-bar input, .search-bar button {
-        width: 100%; /* Make input and button take full width */
-        margin-right: 0;
-        margin-bottom: 5px; /* Space between input and button */
+    .search-bar input {
+        max-width: 60%; /* Adjust width for smaller screens */
     }
 
-    /* Reduce padding on the footer for small screens */
-    footer {
-        padding: 5px 10px;
-        height: auto; /* Let the height adjust based on content */
+    .search-bar button {
+        padding: 5px 10px; /* Keep consistent button size */
     }
 
-    /* Adjust the dropdown menu */
-    .dropdown-menu {
-        position: relative;
-        box-shadow: none; /* Remove box shadow for a cleaner look on small screens */
-    }
-
-    /* Make the logo smaller on small screens */
+    /* Logo adjustments for smaller screens */
     .logo {
         max-width: 60px;
         height: auto;
     }
 }
+
