@@ -22,15 +22,17 @@ header {
 
 nav ul {
     list-style: none;
-    display: flex;
-    justify-content: center;
-    margin: 0;
+    display: flex; /* Keep items in a row */
+    justify-content: flex-start; /* Align items to the start */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent items from wrapping */
+    margin: 0; /* Remove default margins */
     padding: 0;
-    overflow: hidden; /* Prevent overflow on larger screens */
 }
 
 nav li {
-    margin-right: 20px;
+    flex-shrink: 0; /* Prevent items from shrinking */
+    margin-right: 20px; /* Space between menu items */
 }
 
 nav a {
@@ -43,12 +45,13 @@ nav a {
 .search-bar {
     display: flex;
     align-items: center;
-    margin-left: 20px;
+    margin-left: auto; /* Push search bar to the end of the row */
 }
 
 .search-bar input {
     padding: 5px;
     margin-right: 5px;
+    max-width: 150px; /* Limit width for smaller screens */
 }
 
 .search-bar button {
@@ -107,52 +110,46 @@ footer {
 
 /* Responsive adjustments for small screens */
 @media only screen and (max-width: 768px) {
-    /* Header title should be slightly smaller */
+    /* Header title adjustment */
     .header-title {
         font-size: 28px;
     }
 
     /* Make the navigation menu horizontally scrollable */
     nav ul {
-        display: flex;
+        overflow-x: scroll; /* Enable horizontal scrolling */
+        display: flex; /* Ensure items remain in a row */
         justify-content: flex-start; /* Align items to the start */
-        overflow-x: auto; /* Enable horizontal scrolling */
-        white-space: nowrap; /* Prevent wrapping */
     }
 
-    nav li {
-        flex: 0 0 auto; /* Prevent items from shrinking or wrapping */
-        margin-right: 15px; /* Adjust spacing between items */
-    }
-
-    /* Hide scrollbar for cleaner look (optional) */
     nav ul::-webkit-scrollbar {
-        display: none; /* Hide scrollbar for Webkit-based browsers */
-    }
-    nav ul {
-        -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
-        scrollbar-width: none; /* Hide scrollbar for Firefox */
+        height: 5px; /* Adjust scrollbar height */
     }
 
-    /* Search bar adjustments */
+    nav ul::-webkit-scrollbar-thumb {
+        background-color: #24527a; /* Scrollbar color */
+        border-radius: 10px; /* Rounded scrollbar */
+    }
+
+    nav ul::-webkit-scrollbar-track {
+        background-color: #e0e0e0; /* Scrollbar track color */
+    }
+
+    /* Prevent shrinking and ensure all items are visible */
+    nav li {
+        flex: 0 0 auto; /* Prevent items from resizing */
+    }
+
+    /* Search bar stays accessible */
     .search-bar {
-        margin-left: 0;
-        justify-content: center;
-        width: 100%;
+        margin-left: 10px;
+        max-width: 100%;
+        justify-content: flex-start;
     }
 
     .search-bar input {
-        max-width: 60%; /* Adjust width for smaller screens */
-    }
-
-    .search-bar button {
-        padding: 5px 10px; /* Keep consistent button size */
-    }
-
-    /* Logo adjustments for smaller screens */
-    .logo {
-        max-width: 60px;
-        height: auto;
+        max-width: 120px; /* Limit input size on smaller screens */
     }
 }
+
 
