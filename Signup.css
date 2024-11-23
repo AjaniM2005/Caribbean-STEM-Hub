@@ -98,59 +98,49 @@ input[type="password"] {
 .input-group button {
     font-size: 18px;
 }
+/* Responsive Navigation Menu: Small Screens */
 @media screen and (max-width: 768px) {
-    /* Logo Styling */
-    .logo {
-        width: auto; /* Allow the logo to scale naturally */
-        height: auto; /* Maintain aspect ratio */
-        margin-right: 10px; /* Standard spacing */
-    }
-
-    /* Navigation Menu */
     nav ul {
         display: flex;
-        flex-direction: row; /* Keep items in a row */
-        justify-content: center; /* Center items like desktop */
-        align-items: center; /* Vertically align items */
-        padding: 0; /* Remove any extra padding */
-        margin: 0; /* Ensure uniform margin */
+        flex-wrap: nowrap; /* Prevent wrapping */
+        overflow-x: auto; /* Enable horizontal scrolling */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling for mobile devices */
+        padding: 10px; /* Add padding for better aesthetics */
+        margin: 0 auto; /* Center the navigation menu */
     }
 
     nav ul li {
-        margin-right: 15px; /* Keep spacing between items */
-        margin-bottom: 0; /* Remove column-specific spacing */
-        list-style: none; /* Ensure no bullets */
+        flex: 0 0 auto; /* Prevent shrinking or growing */
+        margin-right: 20px; /* Spacing between menu items */
     }
 
-    nav a {
-        text-decoration: none;
-        color: #ffffff;
-        font-size: 16px; /* Slightly smaller font for mobile */
-        font-family: Arial, sans-serif;
+    /* Ensure the navigation menu has enough width for full scrolling */
+    nav {
+        width: 100vw; /* Full width of the viewport */
     }
 
-    /* Dropdown Menu (if applicable) */
-    .dropdown-menu {
-        display: none; /* Start hidden */
-        position: absolute;
-        background-color: #f0f0f0;
-        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-        z-index: 1;
+    /* Style for the scrollbar */
+    nav ul::-webkit-scrollbar {
+        height: 5px; /* Adjust height of horizontal scrollbar */
     }
 
-    .dropdown:hover .dropdown-menu {
-        display: block; /* Show dropdown on hover */
+    nav ul::-webkit-scrollbar-thumb {
+        background-color: #24527a; /* Color for scrollbar thumb */
+        border-radius: 10px;
+    }
+
+    nav ul::-webkit-scrollbar-track {
+        background-color: #f0f0f0; /* Track color for aesthetics */
     }
 }
 
-/* Ensure uniform spacing and layout across devices */
-body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* Landscape Orientation Handling */
+@media screen and (orientation: landscape) and (max-height: 500px) {
+    nav ul {
+        overflow-x: auto; /* Ensure horizontal scrolling in landscape */
+    }
 
-header, nav, footer {
-    max-width: 100%; /* Full-width responsiveness */
-    overflow-x: hidden; /* Prevent horizontal scroll issues */
+    nav ul li {
+        margin-right: 20px;
+    }
 }

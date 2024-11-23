@@ -73,29 +73,49 @@
 .contact-info a:hover {
     color: #004d9c; /* Adjust the color for hover effect */
 }
-/* Responsive styles (adjust as needed) */
+/* Responsive Navigation Menu: Small Screens */
 @media screen and (max-width: 768px) {
-    .logo {
-        max-width: 80px; /* Same as desktop */
-        height: 15px; /* Maintain aspect ratio */
-        margin-right: 5px; /* Same as desktop */
-    }
-    
     nav ul {
-        list-style: none; /* Ensure it remains consistent */
-        display: flex; /* Same as desktop */
-        justify-content: center; /* Center menu horizontally */
-        margin: 0; /* Same as desktop */
+        display: flex;
+        flex-wrap: nowrap; /* Prevent wrapping */
+        overflow-x: auto; /* Enable horizontal scrolling */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling for mobile devices */
+        padding: 10px; /* Add padding for better aesthetics */
+        margin: 0 auto; /* Center the navigation menu */
     }
 
     nav ul li {
-        margin-right: 20px; /* Keep spacing consistent */
+        flex: 0 0 auto; /* Prevent shrinking or growing */
+        margin-right: 20px; /* Spacing between menu items */
     }
 
-    nav a {
-        text-decoration: none; /* Keep consistent styling */
-        color: #ffffff;
-        font-size: 18px; /* Match desktop */
-        font-family: Arial, sans-serif;
+    /* Ensure the navigation menu has enough width for full scrolling */
+    nav {
+        width: 100vw; /* Full width of the viewport */
+    }
+
+    /* Style for the scrollbar */
+    nav ul::-webkit-scrollbar {
+        height: 5px; /* Adjust height of horizontal scrollbar */
+    }
+
+    nav ul::-webkit-scrollbar-thumb {
+        background-color: #24527a; /* Color for scrollbar thumb */
+        border-radius: 10px;
+    }
+
+    nav ul::-webkit-scrollbar-track {
+        background-color: #f0f0f0; /* Track color for aesthetics */
+    }
+}
+
+/* Landscape Orientation Handling */
+@media screen and (orientation: landscape) and (max-height: 500px) {
+    nav ul {
+        overflow-x: auto; /* Ensure horizontal scrolling in landscape */
+    }
+
+    nav ul li {
+        margin-right: 20px;
     }
 }
