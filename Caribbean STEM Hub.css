@@ -1,34 +1,30 @@
-
-/* Header styling for the logo/name and navigation menu */
+/* Base styles for larger screens */
 header {
-    text-align: center; /* Center the content horizontally */
+    text-align: center;
     padding: 5px 15px;
     background-color: #24527a; 
-    border-bottom: 2px solid #333; /* Bottom border separating header from body */
+    border-bottom: 2px solid #333;
 }
 
-/* Logo styling, aligned to the left */
 .logo {
-    text-align: left; /* Align the logo to the left within the header */
-    max-width: 80px; /* Adjust the maximum width for smaller screens */
-    height: 15px; /* Maintain aspect ratio */
-    margin-right: 5px; /* Adjust the margin as needed */
-    }
+    text-align: left;
+    max-width: 80px;
+    height: 15px;
+    margin-right: 5px;
+}
 
-/* Name styling, centered above the navigation menu */
 .header-title {
     display: block;
-    font-size: 34px; /* Adjust the font size as needed */
+    font-size: 34px;
     font-weight: bold;
     color: #ffffff;
 }
 
-/* Navigation menu styling */
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: center; /* Center the menu horizontally */
-    margin: 0; /* Remove default margin on ul */
+    justify-content: center;
+    margin: 0;
     padding: 0;
 }
 
@@ -46,35 +42,32 @@ nav a {
 .search-bar {
     display: flex;
     align-items: center;
-    margin-left: 20px; /* Add margin for spacing */
+    margin-left: 20px;
 }
 
 .search-bar input {
     padding: 5px;
-    margin-right: 5px; /* Add margin for spacing */
+    margin-right: 5px;
 }
 
 .search-bar button {
     padding: 5px 10px;
-    background-color: #333; /* Choose a button background color */
+    background-color: #333;
     color: #fff;
     border: none;
     cursor: pointer;
 }
 
-/* Additional line of separation between header and body */
 body {
-    border-top: 2px solid #333; /* Top border separating body from header */
-    /* Remove default margin and padding from the body element */
+    border-top: 2px solid #333;
     margin: 0;
     padding: 0;
 }
-/* Add styling for the dropdown */
+
 .dropdown:hover .dropdown-menu {
     display: block;
 }
 
-/* Hide the dropdown menu by default */
 .dropdown-menu {
     display: none;
     position: absolute;
@@ -83,13 +76,11 @@ body {
     z-index: 1;
 }
 
-/* Style the dropdown menu items */
 .dropdown-menu li {
     display: block;
     text-align: center;
 }
 
-/* Add styling for the dropdown links */
 .dropdown-menu a {
     text-decoration: none;
     color: #333;
@@ -98,19 +89,66 @@ body {
     padding: 10px 20px;
 }
 
-/* Style the dropdown on hover */
 .dropdown-menu a:hover {
     background-color: #333;
     color: #fff;
 }
 
-/* Footer styling without the black background */
 footer {
-    background-color: transparent; /* Set background color to transparent */
+    background-color: transparent;
     padding: 10px 20px;
-    border-top: 2px solid #fff; /* Top border separating footer from body */
+    border-top: 2px solid #fff;
     position: fixed;
     width: 100%;
     bottom: 0;
-    height: 15vh; /* 20% of the viewport height */
+    height: 15vh;
+}
+
+/* Responsive adjustments for small screens */
+@media only screen and (max-width: 768px) {
+    /* Header title should be centered and the font-size should be reduced */
+    .header-title {
+        font-size: 24px;
+    }
+
+    /* Stack the navigation links vertically */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin-bottom: 10px; /* Add space between items */
+    }
+
+    /* Adjust the search bar layout */
+    .search-bar {
+        margin-left: 0;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .search-bar input, .search-bar button {
+        width: 100%; /* Make input and button take full width */
+        margin-right: 0;
+        margin-bottom: 5px; /* Space between input and button */
+    }
+
+    /* Reduce padding on the footer for small screens */
+    footer {
+        padding: 5px 10px;
+        height: auto; /* Let the height adjust based on content */
+    }
+
+    /* Adjust the dropdown menu */
+    .dropdown-menu {
+        position: relative;
+        box-shadow: none; /* Remove box shadow for a cleaner look on small screens */
+    }
+
+    /* Make the logo smaller on small screens */
+    .logo {
+        max-width: 60px;
+        height: auto;
+    }
 }
