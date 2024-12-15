@@ -113,22 +113,59 @@ footer {
     bottom: 0;
     height: 15vh; /* 20% of the viewport height */
 }
-/* Responsive styles (adjust as needed) */
-/* Remove or modify styles within the media query for consistency */
-@media screen and (max-width: 768px) {
-    .logo {
-        max-width: unset; /* Remove size adjustments */
-        margin-right: unset; /* Keep the margin consistent */
-    }
-    
-    nav ul {
-        flex-direction: row; /* Match laptop/desktop layout */
-        align-items: center; /* Keep alignment consistent */
-        margin: unset; /* Ensure margins remain as they are */
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    /* Adjust header styles for smaller screens */
+    header {
+        padding: 10px;
     }
 
-    nav ul li {
-        margin-right: 20px; /* Match desktop spacing (adjust as needed) */
-        margin-bottom: unset; /* Remove mobile-specific spacing */
+    /* Make the logo smaller and align it to the center */
+    .logo {
+        max-width: 50px;
+        margin: 0 auto; /* Center the logo horizontally */
+    }
+
+    /* Make the header title smaller */
+    .header-title {
+        font-size: 24px;
+    }
+
+    /* Make the navigation menu vertical and responsive */
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav li {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+
+    /* Make the search bar responsive */
+    .search-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search-bar input,
+    .search-bar button {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    /* Adjust the featured content section for smaller screens */
+    .featured-content {
+        padding: 20px;
+    }
+
+    .section-title {
+        font-size: 20px;
+    }
+
+    /* Adjust the footer for smaller screens */
+    footer {
+        height: 20vh; /* Increase the height for better visibility */
     }
 }
