@@ -1,81 +1,198 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Caribbean STEM Hub</title>
-    <link rel="stylesheet" href="About Us.CSS">
-    <link rel="stylesheet" href="Caribbean STEM Hub.css">
-    <link rel="stylesheet" href="Signup.css">
-    <link rel="stylesheet" href="News.CSS">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
     <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            color: #fff;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 10%;
+            background-color: rgba(0, 0, 0, 0.6);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
         nav a {
-            color:#ffffff;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #00e6e6;
+        }
+
+        .content-section {
+            padding: 50px 10%;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2rem;
+            color: #fff;
+        }
+
+        .about-statement {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            background: rgba(255, 255, 255, 0.9);
+            color: #000;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .team-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .team-member {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9);
+            color: #000;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 300px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .social-media {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .social-media a {
+            margin: 0 10px;
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+        }
+
+        .social-media img {
+            width: 100%;
+            height: 100%;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            margin-top: 50px;
+            color: #fff;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
         }
     </style>
-<link rel="icon" href="logo(1).png"
-type="image/x-icon">
-<link rel="shortcut icon"
-href="logo(1).png" type="image/x-icon"
 </head>
 <body>
-    <header style="background-color: #24527a;" >
-        <div class="logo">
-            <img src="logo(1).png" alt="Caribbean STEM Hub">
-        </div>
-        <h1 class="header-title">Caribbean STEM Hub</h1>
+    <header>
+        <div class="logo">Caribbean STEM Hub</div>
         <nav>
-            <ul>
-                <li><a href="index.HTML">Home</a></li>
-                <li><a href="News.html">News</a></li>
-                <li><a href="Article.HTML">Articles</a></li>
-                <li><a href="Research.HTML">Research</a></li>
-                <li><a href="Learn.HTML">Learn</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="Contribute.HTML">Contribute</a></li>
-                <li><a href="Projects.html">Projects</a></li>
-                <li><a href="Feedback.html">Feedback</a></li>
-                <li class="search-bar">
-                    <input type="text" placeholder="Search">
-                    <button type="submit">Search</button>
-                </li>
-            </ul>
-        </nav><!-- Your header content, including logo and navigation menu -->
+            <a href="index.HTML">Home</a>
+            <a href="Explore.HTML">Explore</a>
+            <a href="About Us.HTML">About Us</a>
+            <a href="Contribute.HTML">Contribute</a>
+        </nav>
     </header>
 
-    <main>
-        <section class="about-section">
-            <h1>About Us</h1>
-            <p class="mission-vision">
-                <strong>Mission:</strong> To inspire and empower individuals in the Caribbean region to excel in STEM education and research.
+    <div class="content-section">
+        <h2 class="section-header">About Us</h2>
+        <div class="about-statement">
+            <p> The Caribbean STEM Hub is a platform dedicated to celebrating innovation, collaboration, and education in STEM across the Caribbean. 
+               Founded to bridge the gap between opportunities and talent, our mission is to highlight Caribbean achievements in STEM, foster knowledge-sharing, and connect a vibrant community of passionate individuals..
             </p>
-            <p class="mission-vision">
-                <strong>Vision:</strong> Our vision is to become the primary hub for STEM enthusiasts in the Caribbean, promoting excellence in education, research, and technological advancement. We aspire to create a vibrant ecosystem that connects diverse minds, inspires curiosity, and drives positive change.
-            </p>
-            <section class="contact-info">
-                <h2>Contact Information</h2>
-                <p>If you have any questions or would like to get in touch with us, you can reach us using the following contact details:</p>
-                
-                <ul>
-                    <li>Email: <a href="caribbeanstemhub@gmail.com">caribbeanstemhub@gmail.com</a></li>
-                    <li>Phone: +1 (246) 261-0558</li>
-                    <li>Location: Bridgetown, Barbados</li>
-                </ul>
-            </section>
-            <div class="about-section">
-                <p class="follow-us-text">Follow us at:</p>            
-            <div class="social-media">
-                <a href="https://www.linkedin.com/company/caribbean-stem-hub/" target='_blank'>
-                    <img src="linkedin.png" alt="linkedin">
-                </a>
-                <a href="https://twitter.com/CaribSTEMHub" target='_blank'>  
-                    <img src="X Icon 2.png" alt="X">
-                </a>
-                <a href="https://www.instagram.com/caribbeanstemhub/" target='_blank'>
-                    <img src="Instagram Icon.png" alt="Instagram">
-                </a>
+        </div>
+
+        <h2 class="section-header">Our Team</h2>
+        <div class="team-section">
+            <div class="team-member">
+                <a href="https://www.linkedin.com/in/ajani-maynard-895180266/" target="_blank">
+                    <img src="Ajani.jpg" alt="Ajani" />
+                </a>                
+                <h3>Ajani Maynard</h3>
+                <p>Founder and Executive Director of the Caribbean STEM Hub, Ajani is an aspiring computer scientist passionate about using AI to create impactful solutions for the Caribbean.</p>
             </div>
-        </section>
-    </main>
+            <div class="team-member">
+                <a href="https://www.linkedin.com/in/lisa-simone-taylor-a82465321/" target="_blank">
+                    <img src="Lisa-Simone.jpeg" alt="Lisa-Simone" />
+                </a>
+                <h3>Lisa-Simone Taylor</h3>
+                <p>A staunch proponent of advancing technology in the Caribbean and an active contributor to robotics and tech outreach in Jamaica, Lisa-Simone is a senior at Glenmuir High School and currently serves as a Social Media Manager at the Caribbean STEM Hub.</p>
+            </div>
+            <div class="team-member">
+                <a href="https://www.linkedin.com/in/jahbuki-reynolds-719a72281/" target="_blank">
+                    <img src="Jahbuki.jpeg" alt="Jahbuki" />
+                </a>                
+                <h3>Jahbuki Reynolds</h3>
+                <p>A dedicated member of the Caribbean STEM Hub's social media team, Jahbuki is a student at Wolmer’s Boys’ School in Jamaica. He is a passionate advocate for STEM with aspirations to become a world-renowned cardiothoracic surgeon.
+
+                </p>
+            </div>
+        </div>
+
+        <h2 class="section-header">Follow Us</h2>
+        <div class="social-media">
+            <a href="https://www.linkedin.com/company/caribbean-stem-hub/" target="_blank">
+                <img src="linkedin.png" alt="LinkedIn">
+            </a>
+            <a href="https://x.com/CaribSTEMHub" target="_blank">
+                <img src="X Icon 2.png" alt="X (formerly Twitter)">
+            </a>
+            <a href="https://www.instagram.com/caribbeanstemhub/" target="_blank">
+                <img src="Instagram Icon.png" alt="Instagram">
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Caribbean STEM Hub. All rights reserved.</p>
+    </footer>
 </body>
 </html>

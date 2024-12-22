@@ -1,279 +1,183 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Caribbean STEM Hub</title>
-    <link rel="stylesheet" href="About Us.CSS">
-    <link rel="stylesheet" href="Caribbean STEM Hub.css">
-    <link rel="stylesheet" href="Signup.css">
-    <link rel="stylesheet" href="Contribute.CSS">
+    <title>Contribute - Caribbean STEM Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
     <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            color: #fff;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 10%;
+            background-color: rgba(0, 0, 0, 0.6);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
         nav a {
-            color:#ffffff;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #00e6e6;
+        }
+
+        .content-section {
+            padding: 50px 10%;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2rem;
+            color: #fff;
+        }
+
+        form {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 30px;
+            color: #000;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        form input, form select, form textarea {
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        form textarea {
+            height: 150px;
+        }
+
+        form button {
+            width: 100%;
+            padding: 15px;
+            background-color: #0072ff;
+            border: none;
+            border-radius: 30px;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        form button:hover {
+            transform: scale(1.05);
+            background-color: #00e6e6;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            margin-top: 50px;
+            color: #fff;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
         }
     </style>
-<link rel="icon" href="logo(1).png"
-type="image/x-icon">
-<link rel="shortcut icon"
-href="logo(1).png" type="image/x-icon"
 </head>
 <body>
-    <header style="background-color: #24527a;">
-        <div class="logo">
-            <img src="logo(1).png" alt="Caribbean STEM Hub">
-        </div>
-        <h1 class="header-title">Caribbean STEM Hub</h1>
+    <header>
+        <div class="logo">Caribbean STEM Hub</div>
         <nav>
-            <ul>
-                <li><a href="index.HTML">Home</a></li>
-                <li><a href="News.html">News</a></li>
-                <li><a href="Article.HTML">Articles</a></li>
-                <li><a href="Research.HTML">Research</a></li>
-                <li><a href="Learn.HTML">Learn</a></li>
-                <li><a href="About Us.HTML">About Us</a></li>
-                <li><a href="Contribute.HTML">Contribute</a></li>
-                <li><a href="Projects.html">Projects</a></li>
-                <li><a href="Feedback.html">Feedback</a></li>
-                <li class="search-bar">
-                    <input type="text" placeholder="Search">
-                    <button type="submit">Search</button>
-                </li>
-            </ul>
+            <a href="index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="About Us.HTML">About Us</a>
+            <a href="contribute.html">Contribute</a>
         </nav>
     </header>
 
-    <main>
-        <section class="contribute-section">
-            <h1>Contribute</h1>
-            <p class="section-description">
-                Do you have content you'd like to contribute to Caribbean STEM Hub? We welcome your submissions! Please fill out the form below.
-                By submitting content, you grant permission for Caribbean STEM Hub to share and showcase it.
-            </p>
-            <form id="contribute-form" action="submit_content.php" method="post">
-                <div class="form-group">
-                    <label for="content-type">What type of content do you want to submit?</label>
-                    <select id="content-type" name="content-type">
-                        <option value="research">Research</option>
-                        <option value="article">Article</option>
-                        <option value="project">Project</option>
-                        <option value="reporter">I want to become a volunteer reporter for Caribbean STEM HUB</option>
-                        <option value="upload_notes">Upload Notes</option> 
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="content-description">Description of your content (or abstract for researchers):</label>
-                    <textarea id="content-description" name="content-description" rows="4"></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="content-title">Title of your content:</label>
-                    <input type="text" id="content-title" name="content-title">
-                </div>
-                <label for="content-category">Category of your content</label>
-                <select id="content-category" name="content-category">
-                    <option value="Biology">Biology</option>
-                    <option value="Chemistry">Chemistry</option>
-                    <option value="Physics">Physics</option>
-                    <option value="Earth and Environmental Science">Earth and Environmental Science</option>
-                    <option value="Astronomy and Astrophysics">Astronomy and Astrophysics</option>
-                    <option value="Geology and Geography">Geology and Geography</option>
-                    <option value="Biochemistry">Biochemistry</option>
-                    <option value="Zoology">Zoology</option>
-                    <option value="Oceanography">Oceanography</option>
-                    <option value="Genetics">Genetics</option>
-                    <option value="Mathematics">Mathematics</option>
-                    <option value="Computer Science">Computer Science</option>
-                    <option value="Cybersecurity">Cybersecurity</option>
-                    <option value="Information Technology">Information Technology</option>
-                    <option value="Data Science">Data Science</option>
-                    <option value="Machine Learning and Artificial Intelligence">Machine Learning and Artificial Intelligence</option>
-                    <option value="Robotics">Robotics</option>
-                    <option value="Computer Engineering">Computer Engineering</option>
-                    <option value="Civil Engineering">Civil Engineering</option>
-                    <option value="Mechanical Engineering">Mechanical Engineering</option>
-                    <option value="Electrical Engineering">Electrical Engineering</option>
-                    <option value="Aerospace/Aeronautical Engineering">Aerospace/Aeronautical Engineering</option>
-                    <option value="Biomedical Engineering">Biomedical Engineering</option>
-                    <option value="Neuroscience">Neuroscience</option>
-                    <option value="Medicine and Healthcare">Medicine and Healthcare</option>
-                    <option value="Veterinary Science">Veterinary Science</option>
-                    <!-- Add more categories based on your topics -->
-                </select>
-                <div class="form-group">
-                    <label for="content-text">Paste your content here (or attach a file):</label>
-                    <textarea id="content-text" name="content-text" rows="8"></textarea>
-                    <label for="content-file">Attach a file (optional)</label>
-                    <input type="file" id="content-file" name="content-file"> <!-- You can add file upload input here if needed -->
-                </div>
-                <div id="file-upload" style="display: none;">
-                    <label for="project-files">Attach Photos/Videos of Your Project</label>
-                    <input type="file" name="project-files" id="project-files" accept="image/*, video/*" multiple>
-                </div>
-                <div class="form-group">
-                    <label for="thumbnail">Thumbnail (optional; for article submissions):</label>
-                    <input type="file" id="thumbnail" name="thumbnail">
-                </div>
-                <div class="form-group">
-                    <input type="submit" value="Submit Content">
-            </form>
-        </section>
-    </main>
-    <section class="volunteer-reporter-section">
-        <h1>Volunteer Reporter Application</h1>
-        <p class="section-description">
-            Thank you for your interest in becoming a volunteer reporter for Caribbean STEM Hub. Please fill out the form below to apply.
-        </p>
-        <form id="reporter-application-form" action="process_form.php" method="post">
-            <div class="form-group">
-                <label for="full-name">Full Name:</label>
-                <input type="text" id="full-name" name="full-name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="country">Country of Residence:</label>
-                <input type="text" id="country" name="country" required>
-            </div>
-            <div class="form-group">
-                <label for="age">Age:</label>
-                <input type="number" id="age" name="age" required>
-            </div>
-            <div class="form-group">
-                <label for="education">Educational Background:</label>
-                <input type="text" id="education" name="education" required>
-            </div>
-            <div class="form-group">
-                <label for="occupation">Occupation:</label>
-                <input type="text" id="occupation" name="occupation" required>
-            </div>
-            <div class="form-group">
-                <label for="experience">Writing/Reporting Experience:</label>
-                <textarea id="experience" name="experience" rows="4" required></textarea>
-            </div>
-            <div class="form-group">
-                <label for="motivation">Why do you want to become a volunteer reporter for Caribbean STEM HUB?</label>
-                <textarea id="motivation" name="motivation" rows="4" required></textarea>
-            </div>
-            <div class="form-group">
-                <label for="availability">Availability (hours per week):</label>
-                <input type="number" id="availability" name="availability" required>
-            </div>
-            <div class="form-group">
-                <label for="cv">Upload CV/Resume:</label>
-                <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required>
-            </div>
-            <div class="form-group">
-                <label for="writing-samples">Writing Samples (if available, provide links):</label>
-                <textarea id="writing-samples" name="writing-samples" rows="4"></textarea>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Submit Application">
-            </div>
-        </form>
-    </section>
-    <section class="notes-form">
-        <h1>Upload Study Notes</h1>
-        <p class="section-description">
-            Share your valuable notes with the Caribbean STEM Hub community! Upload your well-prepared study notes in PDF format, and contribute to fostering knowledge in STEM subjects. Provide details about the subject area, topic, and a brief description of your notes.
-        <form id="upload-notes-form" action="submit_notes.php" method="post">
-            <div id="upload-notes-form" style="display: none;">
-        <div class="form-group">
-            <label for="subject-area">Subject Area:</label>
-            <input type="text" id="subject-area" name="subject-area">
-        </div>
-        <div class="form-group">
-            <label for="topic">Topic:</label>
-            <input type="text" id="topic" name="topic">
-        </div>
-        <div class="form-group">
-            <label for="notes-description">Description of Notes:</label>
-            <textarea id="notes-description" name="notes-description" rows="4"></textarea>
-        </div>
-        <div class="form-group">
-            <label for="notes-file">Upload Notes:</label>
-            <input type="file" id="notes-file" name="notes-file" accept=".pdf">
-        </div>
+    <div class="content-section">
+        <h2 class="section-header">Contribute to the Caribbean STEM Hub</h2>
+        <form action="https://formspree.io/f/mqaaznwo" method="POST">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+        
+            <label for="subject">STEM Subject</label>
+            <select id="subject" name="subject" required>
+                <option value="">Select a subject</option>
+                <option value="Physics">Physics</option>
+                <option value="Chemistry">Chemistry</option>
+                <option value="Biology">Biology</option>
+                <option value="Mathematics">Mathematics</option>
+                <option value="Engineering">Engineering</option>
+                <option value="Computer Science">Computer Science</option>
+            </select>
+        
+            <label for="content-type">Content Type</label>
+            <select id="content-type" name="content-type" required>
+                <option value="">Select a content type</option>
+                <option value="Showcase">Showcase</option>
+                <option value="Resources">Resources</option>
+                <option value="STEM Updates">STEM Updates</option>
+                <option value="Academic Insights">Academic Insights</option>
+                <option value="Insights">Insights</option>
+            </select>
+        
+            <label for="attachment">Attach Documents or Photos</label>
+            <input type="file" id="attachment" name="attachment" multiple>
+        
+            <label for="content">Paste Your Content</label>
+            <textarea id="content" name="content" placeholder="Paste your article or project details here"></textarea>
+        
+            <button type="submit">Submit Your Contribution</button>
+        </form>        
     </div>
-    <div class="form-group" id="submit-notes-group" style="display: none;">
-        <input type="submit" value="Submit Notes">
-    </div>
-</section>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Get the content type dropdown element
-            var contentTypeDropdown = document.getElementById('content-type');
-        
-            // Get the forms and the file upload section
-            var contributeForm = document.getElementById('contribute-form');
-            var volunteerForm = document.getElementById('reporter-application-form');
-            var fileUploadSection = document.getElementById('file-upload');
-            var uploadNotesForm = document.getElementById('upload-notes-form');
-            var submitNotesGroup = document.getElementById('submit-notes-group'); // Added line
-            
-            // Get the volunteer form title and description
-            var volunteerFormTitle = document.querySelector('.volunteer-reporter-section h1');
-            var volunteerFormDescription = document.querySelector('.volunteer-reporter-section .section-description');
-        
-            // Get the upload notes form title and description // Corrected lines
-            var uploadNotesFormTitle = document.querySelector('.notes-form h1');
-            var uploadNotesFormDescription = document.querySelector('.notes-form .section-description');
-        
-            // Hide the volunteer form, its title/description, and the upload notes form initially
-            volunteerForm.style.display = 'none';
-            volunteerFormTitle.style.display = 'none';
-            volunteerFormDescription.style.display = 'none';
-            uploadNotesForm.style.display = 'none';
-            uploadNotesFormTitle.style.display = 'none';
-            uploadNotesFormDescription.style.display = 'none';
-        
-            // Attach an event listener to the dropdown
-            contentTypeDropdown.addEventListener('change', function () {
-                // Check if the selected option is the reporter option
-                if (contentTypeDropdown.value === 'reporter') {
-                    // Show the volunteer form and hide the contribute form
-                    contributeForm.style.display = 'none';
-                    volunteerForm.style.display = 'block';
-                    // Hide the file upload section and upload notes form
-                    fileUploadSection.style.display = 'none';
-                    uploadNotesForm.style.display = 'none';
-                    // Show the volunteer form title/description
-                    volunteerFormTitle.style.display = 'block';
-                    volunteerFormDescription.style.display = 'block';
-                } else if (contentTypeDropdown.value === 'upload_notes') {
-                    // Show the upload notes form and hide other forms
-                    contributeForm.style.display = 'none';
-                    volunteerForm.style.display = 'none';
-                    fileUploadSection.style.display = 'none';
-                    uploadNotesForm.style.display = 'block';
-                    submitNotesGroup.style.display = 'block'; // Added line
-                    // Show the upload notes form title/description
-                    uploadNotesFormTitle.style.display = 'block';
-                    uploadNotesFormDescription.style.display = 'block';
-                    // Hide the volunteer form title/description
-                    volunteerFormTitle.style.display = 'none';
-                    volunteerFormDescription.style.display = 'none';
-                } else {
-                    // Show the contribute form and hide the volunteer form and upload notes form
-                    contributeForm.style.display = 'block';
-                    volunteerForm.style.display = 'none';
-                    fileUploadSection.style.display = contentTypeDropdown.value === 'project' ? 'block' : 'none';
-                    uploadNotesForm.style.display = 'none';
-                    // Hide the volunteer form title/description
-                    volunteerFormTitle.style.display = 'none';
-                    volunteerFormDescription.style.display = 'none';
-                    // Hide the upload notes form title/description
-                    uploadNotesFormTitle.style.display = 'none';
-                    uploadNotesFormDescription.style.display = 'none';
-                    submitNotesGroup.style.display = 'none'; // Added line
-                }
-            });
-        
-            // Trigger the change event on page load to ensure the initial state
-            contentTypeDropdown.dispatchEvent(new Event('change'));
-        });
-    </script>
-    
-    </body>
+
+    <footer>
+        <p>&copy; 2024 Caribbean STEM Hub. All rights reserved.</p>
+    </footer>
+</body>
 </html>

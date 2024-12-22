@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caribbean STEM Hub</title>
+    <title>Explore - Caribbean STEM Hub</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -13,11 +13,7 @@
             color: #fff;
             display: flex;
             flex-direction: column;
-            min-height: 100vh; /* Ensure body stretches to viewport height */
-        }
-
-        main {
-            flex: 1; /* Make main content take up remaining space */
+            min-height: 100vh;
         }
 
         header {
@@ -53,44 +49,8 @@
             color: #00e6e6;
         }
 
-        .hero {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            height: 100vh;
-            padding: 0 20px;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin: 10px 0;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin: 20px 0;
-            line-height: 1.6;
-        }
-
-        .hero button {
-            padding: 15px 30px;
-            background-color: #00e6e6;
-            border: none;
-            border-radius: 30px;
-            color: #000;
-            font-size: 1rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-
-        .hero button:hover {
-            transform: scale(1.1);
-        }
-
         .content-section {
+            flex: 1;
             padding: 50px 10%;
         }
 
@@ -98,6 +58,28 @@
             text-align: center;
             margin-bottom: 30px;
             font-size: 2rem;
+        }
+
+        .filter-bar {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .filter-bar button {
+            padding: 10px 20px;
+            background-color: #00e6e6;
+            border: none;
+            border-radius: 20px;
+            color: #000;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .filter-bar button:hover {
+            transform: scale(1.1);
         }
 
         .grid {
@@ -128,30 +110,11 @@
             text-align: center;
             padding: 20px;
             background-color: rgba(0, 0, 0, 0.7);
+            margin-top: auto;
         }
 
         footer p {
             margin: 0;
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
-            header {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            nav {
-                flex-wrap: wrap;
-                gap: 10px;
-            }
         }
     </style>
 </head>
@@ -159,43 +122,54 @@
     <header>
         <div class="logo">Caribbean STEM Hub</div>
         <nav>
-            <a href="index.HTML">Home</a>
-            <a href="Explore.HTML">Explore</a>
+            <a href="index.html">Home</a>
+            <a href="explore.html">Explore</a>
             <a href="About Us.HTML">About Us</a>
             <a href="Contribute.HTML">Contribute</a>
         </nav>
     </header>
 
-    <main>
-        <div class="hero">
-            <h1>Welcome to the Caribbean STEM Hub</h1>
-            <p>Celebrating innovation and collaboration across the Caribbean. Explore news, research, projects, and more from our thriving STEM community.</p>
-            <button onclick="window.location.href='Explore.HTML';">Discover More</button>
+    <div class="content-section">
+        <h2 class="section-header">Explore Projects and Resources</h2>
+        <div class="filter-bar">
+            <button onclick="filterContent('all')">All</button>
+            <button onclick="filterContent('showcase')">Showcase</button>
+            <button onclick="filterContent('resources')">Resources</button>
+            <button onclick="filterContent('STEM Updates')">STEM Updates</button>
+            <button onclick="filterContent('Academic Insights')">Academic Insights</button>
+            <button onclick="filterContent('Insights')">Insights</button>
         </div>
 
-        <div class="content-section" id="news">
-            <h2 class="section-header">Latest News</h2>
+        <h3 class="section-header">Featured</h3>
+        <div class="grid">
+            <!-- Cards below are commented out for now -->
             <!--
-            <div class="grid">
-                <div class="card">
-                    <h3>News Title 1</h3>
-                    <p>Summary of news content. Click to read more.</p>
-                </div>
-                <div class="card">
-                    <h3>News Title 2</h3>
-                    <p>Summary of news content. Click to read more.</p>
-                </div>
-                <div class="card">
-                    <h3>News Title 3</h3>
-                    <p>Summary of news content. Click to read more.</p>
-                </div>
+            <div class="card">
+                <h3>Project Title 1</h3>
+                <p>Summary of project content. Click to learn more.</p>
+            </div>
+            <div class="card">
+                <h3>Project Title 2</h3>
+                <p>Summary of project content. Click to learn more.</p>
             </div>
             -->
         </div>
-    </main>
+
+        <h3 class="section-header">Recently Submitted</h3>
+        <div class="grid">
+            <!-- Additional cards for recently submitted content -->
+        </div>
+    </div>
 
     <footer>
         <p>&copy; 2024 Caribbean STEM Hub. All rights reserved.</p>
     </footer>
+
+    <script>
+        function filterContent(category) {
+            alert('Filtering content by: ' + category);
+            // Placeholder for filter logic to dynamically show/hide content
+        }
+    </script>
 </body>
 </html>
