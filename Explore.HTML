@@ -119,17 +119,17 @@
             margin: 0;
         }
     
-        @media screen and (max-width: 768px) {
+       /* Responsive styles for smaller screens */
+    @media screen and (max-width: 768px) {
         header {
-            flex-direction: row; /* Keeps header content in a single row */
-            justify-content: space-between; /* Ensures proper spacing */
-            align-items: center; /* Centers items vertically */
+            flex-direction: column;
+            align-items: center;
         }
 
         nav {
-            flex-direction: row; /* Ensures links stay in a single row */
-            flex-wrap: wrap; /* Allows wrapping if needed for very small screens */
-            justify-content: flex-end; /* Aligns links to the right side */
+            flex-direction: row; /* Ensures the links are in a single row */
+            justify-content: center; /* Centers the navigation links */
+            flex-wrap: wrap; /* Allows wrapping if needed */
             gap: 10px;
         }
 
