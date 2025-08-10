@@ -152,36 +152,43 @@
         </div>
 
         <h2 class="section-header">Our Team</h2>
-        <div class="team-section">
-            <div class="team-member">
-                <a href="https://www.linkedin.com/in/ajani-maynard-895180266/" target="_blank">
-                    <img src="Ajani.jpg" alt="Ajani" />
-                </a>                
-                <h3>Ajani Maynard</h3>
-                <p>Founder and Executive Director of the Caribbean STEM Hub, Ajani is an aspiring computer scientist passionate about using AI to create impactful solutions for the Caribbean.</p>
-            </div>
-            <div class="team-member">
-                <a href="https://www.linkedin.com/in/lisa-simone-taylor-a82465321/" target="_blank">
-                    <img src="Lisa-Simone.jpeg" alt="Lisa-Simone" />
-                </a>
-                <h3>Lisa-Simone Taylor</h3>
-                <p>A staunch proponent of advancing technology in the Caribbean and an active contributor to robotics and tech outreach in Jamaica, Lisa-Simone is a senior at Glenmuir High School and currently serves as a Social Media Manager at the Caribbean STEM Hub.</p>
-            </div>
-            <div class="team-member">
-                <a href="https://www.linkedin.com/in/jahbuki-reynolds-719a72281/" target="_blank">
-                    <img src="Jahbuki.jpeg" alt="Jahbuki" />
-                </a>                
-                <h3>Jahbuki Reynolds</h3>
-                <p>A dedicated member of the Caribbean STEM Hub's social media team, Jahbuki is a student at Wolmer’s Boys’ School in Jamaica. He is a passionate advocate for STEM with aspirations to become a world-renowned cardiothoracic surgeon</p>
-            </div>
-            <div class="team-member">
-                <a href="linkedin.com/in/gabrielle-george-756232337" target="_blank">
-                    <img src="No pfp.png" alt="Gabrielle" />
-                </a>                
-                <h3>Gabrielle George</h3>
-                <p>An asping epidemiologist, pursuing a Pharmacy technician course at Distinction college, Gabrielle is a devoted volunteer journalist at the Caribbean STEM Hub who strives to highlight groundbreaking developments and inspiring stories from across the Caribbean STEM landscape. </p>
-            </div>
+<div class="team-section">
+    <!-- Editorial Team Card -->
+    <div class="team-member" onclick="toggleTeam('editorial')">
+        <img src="editorial-icon.png" alt="Editorial Team Icon" />
+        <h3>Editorial Team</h3>
+        <p>Curating and crafting content that amplifies Caribbean STEM voices. Click to view members.</p>
+        <div id="editorial" class="team-list" style="display: none; margin-top: 15px;">
+            <ul style="list-style: none; padding: 0;">
+                <li><a href="https://www.linkedin.com/in/ajani-maynard-895180266/" target="_blank">Ajani Maynard</a> – Founder & Executive Director</li>
+                <li><a href="https://linkedin.com/in/gabrielle-george-756232337" target="_blank">Gabrielle George</a> – Volunteer Journalist</li>
+                <li><a href="https://www.linkedin.com/in/amandeep-sen/" target="_blank">Amandeep Sen</a> – Volunteer Journalist</li>
+                <li><a href="https://www.linkedin.com/in/jhayrise-coppin-912b64285/" target="_blank">Jhayrise Coppin</a> – Volunteer Journalist</li>
+                <li><a href="https://www.linkedin.com/in/joseph-hindi-849a94369/" target="_blank">Joseph Hindi</a> – Volunteer Journalist</li>
+                <li><a href="https://www.linkedin.com/in/lu%C3%ADs-sousa-550744167/" target="_blank">Luís Sousa</a> – Volunteer Journalist</li>
+                <li><a href="https://www.linkedin.com/in/ashley-wiltshire-350656bb/" target="_blank">Ashley Wiltshire</a> – Volunteer Journalist</li>
+                <li><a href="https://www.linkedin.com/in/kyle-remy-268b99321/" target="_blank">Kyle Remy</a> – Volunteer Journalist</li>
+                <li><a href="https://www.linkedin.com/in/chloe-o-neal-5531a630b/" target="_blank">Chloe O'Neal</a> – Volunteer Journalist</li>
+            </ul>
         </div>
+    </div>
+
+    <!-- Social Media Team Card -->
+    <div class="team-member" onclick="toggleTeam('social')">
+        <img src="social-icon.png" alt="Social Media Team Icon" />
+        <h3>Social Media Team</h3>
+        <p>Connecting communities and sharing stories across platforms. Click to view members.</p>
+        <div id="social" class="team-list" style="display: none; margin-top: 15px;">
+            <ul style="list-style: none; padding: 0;">
+                <li><a href="https://www.linkedin.com/in/lisa-simone-taylor-a82465321/" target="_blank">Lisa-Simone Taylor</a> – Social Media Manager</li>
+                <li><a href="https://www.linkedin.com/in/iamkevinpinnock/" target="_blank">Kevin Pinnock</a> – Social Media Manager</li>
+                <li><a href="https://www.linkedin.com/in/jahbuki-reynolds-719a72281/" target="_blank">Jahbuki Reynolds</a> – Content Creator</li>
+                <!-- Add more as needed -->
+            </ul>
+        </div>
+    </div>
+</div>
+
 
         <h2 class="section-header">Follow Us</h2>
         <div class="social-media">
@@ -197,8 +204,15 @@
         </div>
     </div>
 
+<script>
+    function toggleTeam(id) {
+        const section = document.getElementById(id);
+        section.style.display = section.style.display === "none" ? "block" : "none";
+    }
+</script>
+
     <footer>
-        <p>&copy; 2024 Caribbean STEM Hub. All rights reserved.</p>
+        <p>&copy; 2025 Caribbean STEM Hub. All rights reserved.</p>
     </footer>
 </body>
 </html>
